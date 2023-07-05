@@ -1,0 +1,13 @@
+{
+    "name": "own-mvc/simple-mvc-framework-with-php",
+    "description": "Simple MVC framework with PHP",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\":"bootstrap/"
+
+        },
+        "files": ["bootstrap/helpers/app.php"]
+        
+    }
+}
