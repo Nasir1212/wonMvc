@@ -1,5 +1,6 @@
 <?php
 namespace App\Controllers;
+use Core\Request;
 
 class HomeController{
 
@@ -11,8 +12,10 @@ class HomeController{
     }
 
 
-    public function test(){
+    public function test(Request $request){
         $name = "Nasir Uddin";
-        return view("home.index",compact("name"));
+    
+        print_r($request);
+        return view("home.index",compact("name","test"));
     }
 }

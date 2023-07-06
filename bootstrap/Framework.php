@@ -5,6 +5,12 @@ class Framework
 {
     use Router, UrlEngine,View;
 
+    private Request $request;
+
+    public function __construct(){
+        $this->request = new Request();
+    }
+
     /**
      * @throws \Exception
      */
@@ -30,7 +36,7 @@ class Framework
         $class = new $class();
 
         //run the method
-        $class->$method();
+        $class->$method($this->request);
         return;
     }
 
